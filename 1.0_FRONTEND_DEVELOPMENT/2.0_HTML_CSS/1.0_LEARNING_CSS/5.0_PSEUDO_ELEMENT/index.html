@@ -12,12 +12,16 @@
         background: #1a1a1a;
         color: white;
       }
+
       .nav-container {
         margin-bottom: 40px;
       }
+
       h2 {
         margin-bottom: 10px;
       }
+
+      /* NAV1 */
       .nav1 {
         background-color: #ffffff;
         padding: 10px;
@@ -35,22 +39,116 @@
       .nav1 a {
         text-decoration: none;
         color: rgb(26, 3, 3);
-        /* background-color: orange; */
         padding: 5px 15px;
+        position: relative;
+      }
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: blue;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
       }
       .nav1 .login-button button {
         background-color: rgb(5, 5, 204);
         color: white;
         padding: 5px 15px;
         border: none;
-        color: white;
-        border: none;
-        padding: 5px 15px;
         border-radius: 5px;
         cursor: pointer;
       }
+
+      /* NAV2 */
+      .nav2 {
+        background-color: #03643c;
+        width: 200px;
+        padding: 20px;
+      }
+      .nav2 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav2 li {
+        margin-bottom: 10px;
+      }
+      .nav2 a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+      }
+      .nav2 a:hover {
+        background-color: #137e0a;
+      }
+      .nav2 .login-button {
+        background-color: #05501d;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .nav2 .login-button:hover {
+        background-color: #137e0a;
+        border: 1px solid white;
+      }
+
+      /* NAV3 */
+      .nav3 {
+        background-color: rgb(29, 161, 201);
+        padding: 10px;
+      }
+      .nav3 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav3 li {
+        position: relative;
+      }
+      .nav3 a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+      }
+
+      /* DROPDOWN */
+      .nav3 .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 150px;
+      }
+
+      .nav3 .dropdown-content a {
+        color: black;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+        position:absolute;
+        background-color: rgb(45, 54, 54);
+        color: rgb(254, 252, 252);
+        min-width: 150px;
+      }
     </style>
   </head>
+
   <body>
     <div class="nav-container">
       <h2>Variation 1: Horizontal with underline effect</h2>
@@ -72,21 +170,26 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Products</a></li>
         </ul>
-        <button>Login</button>
+        <button class="login-button">Login</button>
       </nav>
     </div>
 
     <div class="nav-container">
       <h2>Variation 3: Horizontal with dropdown</h2>
-      <nav class="nav2">
+      <nav class="nav3">
         <ul>
           <li><a href="#">Home</a></li>
-          <li>
+
+          <!-- FIXED -->
+          <li class="dropdown">
             <a href="#">About</a>
-            <a href="#">Our Story</a>
-            <a href="#">Team</a>
-            <a href="#">Contact</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
           </li>
+
           <li><a href="#">Products</a></li>
           <li><button>Login</button></li>
         </ul>
