@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Score-X — SGPA Calculator</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%,100% { text-shadow: 0 0 20px rgba(187,222,237,0.3), 0 0 40px rgba(187,222,237,0.1); }
+  50% { text-shadow: 0 0 30px rgba(187,222,237,0.6), 0 0 60px rgba(187,222,237,0.3); }
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+</style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] text-white relative overflow-hidden">
+
+<!-- Stars -->
+<div id="starsContainer" class="absolute inset-0"></div>
+
+<!-- Main Card -->
+<div class="relative z-10 w-full max-w-[980px] text-center p-10 rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] shadow-2xl border border-white/10 animate-[slideInUp_0.8s_ease-out]">
+
+  <!-- Logo -->
+  <div class="text-5xl font-bold mb-6 bg-gradient-to-r from-[#bbdeef] to-white text-transparent bg-clip-text animate-[slideInDown_0.8s_ease-out,glow_3s_infinite]">
+    Score-X
+  </div>
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold mb-3 animate-[slideInUp_0.8s_ease-out_0.2s_both]">
+    SGPA Calculator for
+  </h1>
+
+  <div class="text-lg text-[#bbdeef] mb-8 animate-[slideInUp_0.8s_ease-out_0.4s_both]">
+    B.Tech — Semester I, II, III & IV
+  </div>
+
+  <!-- Description -->
+  <p class="max-w-xl mx-auto text-[#bbdeefcc] mb-10 leading-relaxed animate-[slideInUp_0.8s_ease-out_0.6s_both]">
+    Calculate your SGPA efficiently and track your academic performance across all semesters. Monitor your grades and understand your progress.
+  </p>
+
+  <!-- Buttons -->
+  <div class="flex flex-wrap justify-center gap-6 animate-[slideInUp_0.8s_ease-out_0.8s_both]">
+
+    <a href="#" class="px-10 py-4 rounded-full font-semibold border-2 border-[#bbdeef] bg-gradient-to-r from-[#bbdeef] to-white text-black hover:scale-105 transition">
+      Sem I
+    </a>
+
+    <a href="#" class="px-10 py-4 rounded-full font-semibold border-2 border-[#bbdeef] bg-gradient-to-r from-[#bbdeef] to-white text-black hover:scale-105 transition">
+      Sem II
+    </a>
+
+    <a href="#" class="px-10 py-4 rounded-full font-semibold border-2 border-[#bbdeef] bg-gradient-to-r from-[#bbdeef] to-white text-black hover:scale-105 transition">
+      Sem III
+    </a>
+
+    <a href="#" class="px-10 py-4 rounded-full font-semibold border-2 border-[#bbdeef] bg-gradient-to-r from-[#bbdeef] to-white text-black hover:scale-105 transition">
+      Sem IV
+    </a>
+
+  </div>
+
+  <!-- Note -->
+  <div class="mt-10 text-sm text-[#bbdeefcc] animate-[slideInUp_1s_ease-out]">
+    Notes: Other Courses & Rest Semesters Option Will Be Available Soon
+  </div>
+
+</div>
+
+<script>
+// simple stars
+const container = document.getElementById("starsContainer");
+for(let i=0;i<40;i++){
+  const star = document.createElement("div");
+  star.className = "absolute w-[2px] h-[2px] bg-[#bbdeef] rounded-full opacity-40 animate-[twinkle_3s_infinite]";
+  star.style.left = Math.random()*100 + "%";
+  star.style.top = Math.random()*100 + "%";
+  container.appendChild(star);
+}
+</script>
+
+</body>
+</html>

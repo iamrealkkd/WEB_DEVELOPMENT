@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSU SGPA Calculator - Semester 3</title>
+  <link rel="icon" type="image/png" href="../photo/Code.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e4e5e6, #1c1c1d);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffd900eb;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table th, table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 15px;
+    }
+    table th {
+      background-color: #f3eaff;
+      color: #000000;
+    }
+    input[type="number"] {
+      width: 70px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .actions {
+      text-align: center;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .calc-btn {
+      background-color: #0011fa;
+      color: white;
+    }
+    .calc-btn:hover {
+      background-color: #233269;
+    }
+    .reset-btn {
+      background-color: #eee;
+      color: #333;
+    }
+    .result {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #4a3aff;
+    }
+    .credits {
+      text-align: right;
+      font-size: 14px;
+      color: #666;
+      margin-top: -10px;
+      
+    }
+     
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      .container {
+        max-width: 98vw;
+        padding: 10px 2vw;
+        margin: 10px 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      h1 {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 12px;
+      }
+      table th, table td {
+        padding: 6px 2px;
+        font-size: 12px;
+      }
+      table {
+        font-size: 12px;
+        margin-bottom: 10px;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+      }
+      input[type="number"] {
+        width: 48px;
+        font-size: 12px;
+        padding: 4px;
+      }
+      .actions {
+        margin-top: 10px;
+      }
+      button {
+        padding: 8px 10px;
+        font-size: 13px;
+        margin: 3px;
+      }
+      .result {
+        font-size: 15px;
+        margin-top: 12px;
+      }
+      .credits {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button onclick="goHome()">⬅ Back to Home</button>
+    <h1 style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <img src="../photo/Code.png" alt="Logo" style="height:70px;width:auto;vertical-align:middle;object-fit:contain;filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));">
+      <span>Semester IV — SGPA Calculator (NSU)</span>
+    </h1>
+    <p>Enter marks (theory = out of 100, labs = out of 50). Fields cannot exceed their max values.</p>
+
+    <form id="sgpaForm">
+      <table>
+        <tr>
+          <th>Subject</th>
+          <th>Credits</th>
+          <th>Max Marks</th>
+          <th>Your Marks</th>
+        </tr>
+        <tr>
+          <td>Engineering Mathematics-IV (BT401)</td><td>4</td><td>100</td>
+          <td><input type="number" id="maths" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>Microprocessor and Microcontroller  (BTCSE 402)</td><td>4</td><td>100</td>
+          <td><input type="number" id="microprocessor" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>E-Commerce (BTCSE 403)</td><td>4</td><td>100</td>
+          <td><input type="number" id="e_commerce" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>Operating Systems (BTCSE 404)</td><td>4</td><td>100</td>
+          <td><input type="number" id="operating_systems" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>Database Management System (BTCSE 405)</td><td>4</td><td>100</td>
+          <td><input type="number" id="database_management" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>Web Technology (BTCSE 406)</td><td>4</td><td>100</td>
+          <td><input type="number" id="web_technology" max="100" min="0" placeholder="0-100"></td>
+        </tr>
+        <tr>
+          <td>DBMS Lab (BTCSE 407L)</td><td>2</td><td>50</td>
+            <td><input type="number" id="dbms_lab" max="50" min="0" placeholder="0-50"></td>
+        </tr>
+        <tr>
+          <td>Web Technology Lab (BTCSE 408L)</td><td>2</td><td>50</td>
+          <td><input type="number" id="web_technology_lab" max="50" min="0" placeholder="0-50"></td>
+        </tr>
+      </table>
+
+      <div class="credits">Total credits: 28</div>
+
+      <div class="actions">
+        <button type="button" class="calc-btn" onclick="calculateSGPA()">Calculate SGPA</button>
+        <button type="reset" class="reset-btn">Clear</button>
+      </div>
+    </form>
+
+    <div class="result" id="result"></div>
+    <!-- Custom Modal Popup for Warnings -->
+    <div id="customModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;">
+      <div style="background:#fff;padding:28px 32px 20px 32px;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.25);min-width:280px;max-width:90vw;text-align:center;position:relative;">
+        <div id="modalMessage" style="font-size:1.1rem;color:#b94a48;margin-bottom:18px;"></div>
+        <button onclick="closeModal()" style="padding:8px 24px;background:#4a3aff;color:#fff;border:none;border-radius:8px;font-size:1rem;box-shadow:0 2px 8px rgba(74,58,255,0.08);cursor:pointer;">OK</button>
+      </div>
+    </div>
+    <!-- SGPA Result Modal -->
+    <div id="sgpaModal" style="display:none;position:fixed;z-index:10000;left:0;top:0;width:100vw;height:100vh;background:rgba(5, 41, 224, 0);justify-content:center;align-items:center;">
+      <div style="background:#ffffffeb;padding:20px;border-radius:12px;box-shadow:0px 6px 18px rgba(255, 255, 255, 0.15);width:300px;height:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;">
+        <h2 style="color:#000000;margin:0 0 20px 0;">Your SGPA</h2>
+        <div id="sgpaValue" style="font-size:2rem;font-weight:bold;color:#0a14d8;margin-bottom:20px;"></div>
+        <button onclick="closeSgpaModal()" style="padding:10px 20px;background:#de0707;color:white;border:none;border-radius:6px;font-size:1rem;cursor:pointer;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "../index.html"; // Change this to your home page
+    }
+
+    // Modal functions
+    function showModal(message) {
+      document.getElementById('modalMessage').innerText = message;
+      document.getElementById('customModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('customModal').style.display = 'none';
+    }
+
+    // SGPA Modal functions
+    function showSgpaModal(sgpa) {
+      document.getElementById('sgpaValue').innerText = sgpa;
+      document.getElementById('sgpaModal').style.display = 'flex';
+    }
+    function closeSgpaModal() {
+      document.getElementById('sgpaModal').style.display = 'none';
+    }
+
+    function calculateSGPA() {
+      const subjects = [
+        { id: 'maths', credits: 4, max: 100 },
+        { id: 'microprocessor', credits: 4, max: 100 },
+        { id: 'e_commerce', credits: 4, max: 100 },
+        { id: 'operating_systems', credits: 4, max: 100 },
+        { id: 'database_management', credits: 4, max: 100 },
+        { id: 'web_technology', credits: 4, max: 100 },
+        { id: 'dbms_lab', credits: 2, max: 50, isLab: true },
+        { id: 'web_technology_lab', credits: 2, max: 50, isLab: true },
+      ];
+
+      let totalCredits = 0;
+      let weightedPoints = 0;
+
+      for (let subj of subjects) {
+        let marks = document.getElementById(subj.id).value;
+
+        if (marks === "") {
+          showModal("Please fill all fields before calculating.");
+          return;
+        }
+
+        marks = parseInt(marks);
+        if (marks > subj.max) {
+          showModal(`Invalid marks in ${subj.id}, maximum allowed is ${subj.max}`);
+          return;
+        }
+
+        // For labs, multiply marks by 2 to make them out of 100
+        let marksForGrade = subj.isLab ? marks * 2 : marks;
+
+        let gradePoint;
+        if (marksForGrade >= 90) gradePoint = 10;
+        else if (marksForGrade >= 80) gradePoint = 9;
+        else if (marksForGrade >= 70) gradePoint = 8;
+        else if (marksForGrade >= 60) gradePoint = 7;
+        else if (marksForGrade >= 50) gradePoint = 6;
+        else if (marksForGrade >= 40) gradePoint = 5;
+        else gradePoint = 0;
+
+        totalCredits += subj.credits;
+        weightedPoints += gradePoint * subj.credits;
+      }
+
+      const sgpa = (weightedPoints / totalCredits).toFixed(2);
+      document.getElementById("result").innerText = "Your SGPA: " + sgpa;
+      showSgpaModal(sgpa);
+    }
+  </script>
+</body>
+</html>

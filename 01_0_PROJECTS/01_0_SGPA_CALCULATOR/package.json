@@ -1,5 +1,5 @@
 {
-  "name": "1.0_sgpa_calculator",
+  "name": "01_0_sgpa_calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@tailwindcss/cli": "^4.2.4",
-    "tailwindcss": "^4.2.4"
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
   }
 }

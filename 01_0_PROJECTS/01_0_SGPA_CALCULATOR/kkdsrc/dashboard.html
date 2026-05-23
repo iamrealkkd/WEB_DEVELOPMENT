@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score X - Dashboard</title>
+    <link rel="stylesheet" href="hello.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">Score X</span>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="score-x.html" class="nav-link">Home</a>
+                    <a href="#sgpa" class="nav-link">SGPA & CGPA</a>
+                    <a href="#leaderboard" class="nav-link">Leaderboard</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <section class="welcome-section">
+                <h1>Welcome to Your Score X Dashboard</h1>
+                <p>Manage your academic performance and compete with peers</p>
+            </section>
+
+            <!-- SGPA & CGPA Section -->
+            <section id="sgpa" class="dashboard-section">
+                <div class="section-header">
+                    <h2>SGPA & CGPA Calculator</h2>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Calculate SGPA</h3>
+                        <p>Check your Semester Grade Point Average</p>
+                        <a href="index.html" class="card-btn">Open Calculator</a>
+                    </div>
+                    <div class="card">
+                        <h3>View CGPA</h3>
+                        <p>Track your Cumulative Grade Point Average</p>
+                        <a href="index.html" class="card-btn">View Details</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard Section -->
+            <section id="leaderboard" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Leaderboard</h2>
+                </div>
+                <div class="leaderboard-container">
+                    <div class="leaderboard-item rank-1">
+                        <span class="rank">1</span>
+                        <span class="name">Academic Champion</span>
+                        <span class="score">9.85 CGPA</span>
+                    </div>
+                    <div class="leaderboard-item rank-2">
+                        <span class="rank">2</span>
+                        <span class="name">Excellence Scholar</span>
+                        <span class="score">9.72 CGPA</span>
+                    </div>
+                    <div class="leaderboard-item rank-3">
+                        <span class="rank">3</span>
+                        <span class="name">Top Performer</span>
+                        <span class="score">9.58 CGPA</span>
+                    </div>
+                    <div class="leaderboard-item rank-other">
+                        <span class="rank">4</span>
+                        <span class="name">Your Rank</span>
+                        <span class="score">9.24 CGPA</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Score X. All rights reserved.</p>
+        </footer>
+
+        <!-- Background decorative elements -->
+        <div class="stars"></div>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.header-content')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

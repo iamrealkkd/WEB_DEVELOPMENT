@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGPA Calculator</title>
-    <link rel="stylesheet" href="output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGPA Calculator</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <style>
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
 </head>
 <body>
     
+<main class="h-screen flex flex-col items-center justify-center bg-white">
+      <div class="mb-5">
+    <div class="text-[#A52A2A] font-semibold text-lg whitespace-nowrap overflow-hidden border-r-2 border-[#A52A2A] w-0 animate-[typing_3s_steps(20)_forwards,blink_0.7s_infinite]">
+      Check Your SGPA Now
+    </div>
+    <div>
+<div class="flex justify-center">
+ <a href="home.html" class="bg-[#A52A2A] text-white px-4 py-1 rounded-lg text-sm font-semibold inline-block">
+  Check
+</a>
+</div>
+  </main>
+
 </body>
 </html>
