@@ -7,6 +7,7 @@ import Add from "./components/Add"
 
 const App = () => {
   return <Add/>
+  return <Greet/>
 }
 
 export default App
