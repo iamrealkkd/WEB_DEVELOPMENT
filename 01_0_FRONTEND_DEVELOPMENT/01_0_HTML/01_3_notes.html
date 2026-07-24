@@ -1,0 +1,975 @@
+<!-- 
+DOCTYPE DECLARATION
+This tells the browser that this document is written using HTML5.
+
+Without this line, the browser may enter "quirks mode" which can break layout
+and cause inconsistent rendering across browsers.
+
+Always keep this as the FIRST LINE of every HTML document.
+-->
+
+<html lang="en">
+  <!-- 
+<html> TAG
+Root element of every HTML document.
+
+All HTML code must exist inside this tag.
+
+ATTRIBUTE:
+lang="en"
+
+This tells browsers and search engines that the content language is English.
+Important for:
+• Accessibility
+• SEO
+• Screen readers
+-->
+
+  <head>
+    <!-- 
+HEAD SECTION
+
+The <head> contains METADATA about the page.
+Metadata = information ABOUT the page, not the visible content.
+
+Examples inside head:
+• title
+• meta tags
+• favicon
+• css links
+• scripts
+-->
+
+    <meta charset="UTF-8" />
+    <!-- 
+CHARACTER ENCODING
+
+UTF-8 is the most common character encoding.
+
+It allows the browser to display:
+• English
+• Symbols
+• Emojis
+• Many international languages
+
+Without UTF-8 some characters may appear as:
+???? or strange symbols.
+-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+VIEWPORT META TAG
+
+Important for RESPONSIVE DESIGN.
+
+It tells the browser how the page should scale on mobile devices.
+
+width=device-width
+→ sets width equal to device screen
+
+initial-scale=1.0
+→ default zoom level
+-->
+
+    <title>HTML STUDY PAGE</title>
+    <!-- 
+TITLE TAG
+
+Defines the title of the webpage.
+
+This appears in:
+• Browser tab
+• Search engine results
+• Bookmarks
+
+SEO TIP:
+Always use descriptive titles.
+Example:
+"Best Resort in Jamshedpur | Golden Leaf Resort"
+-->
+
+    <link rel="icon" href="favicon.ico" />
+    <!-- 
+FAVICON
+
+Small icon displayed in browser tabs.
+
+Helps with:
+• branding
+• user recognition
+• professional appearance
+
+Common favicon sizes:
+16x16
+32x32
+48x48
+-->
+
+    <style>
+      /*
+CSS SECTION
+
+CSS = Cascading Style Sheets
+
+Used to style HTML elements.
+
+HTML = structure
+CSS = appearance
+JavaScript = behavior
+*/
+
+      body {
+        background-color: white;
+        font-family: Arial;
+      }
+
+      /*
+body selector
+
+CSS SELECTOR chooses which element to style.
+
+Here:
+body → selects entire webpage body
+
+Properties:
+background-color → sets page color
+font-family → defines text style
+*/
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+BODY SECTION
+
+The <body> contains everything visible on the webpage.
+
+Examples:
+• text
+• images
+• buttons
+• forms
+• videos
+-->
+
+    <header>
+      <!-- 
+HEADER TAG
+
+Semantic HTML element.
+
+Used for:
+• logos
+• navigation
+• site titles
+
+Helps search engines understand page structure.
+-->
+      <h1>WELCOME TO HTML</h1>
+    </header>
+
+    <main>
+      <!-- 
+MAIN TAG
+
+Represents the MAIN CONTENT of the webpage.
+
+Each page should have only ONE <main>.
+-->
+
+      <section>
+        <!-- 
+SECTION TAG
+
+Represents a logical section of the page.
+
+Example:
+• blog section
+• product section
+• news section
+-->
+
+        <h2>ABOUT HTML</h2>
+
+        <p>
+          <!-- 
+PARAGRAPH TAG
+
+Used for blocks of text.
+
+Browsers automatically add margin above and below paragraphs.
+-->
+          HTML stands for HyperText Markup Language.
+        </p>
+
+        <a href="https://google.com">
+          <!-- 
+ANCHOR TAG
+
+Used to create hyperlinks.
+
+ATTRIBUTE:
+href = destination URL
+
+Example uses:
+• navigate to another page
+• download files
+• open email links
+-->
+          Visit Google
+        </a>
+
+        <br />
+        <!-- 
+BR TAG
+
+Line break element.
+
+Creates a new line inside text.
+
+This is an EMPTY ELEMENT
+(no closing tag required)
+-->
+
+        <hr />
+        <!-- 
+HR TAG
+
+Horizontal rule.
+
+Used to visually separate sections.
+-->
+
+        <img src="image.jpg" width="200" />
+        <!-- 
+IMAGE TAG
+
+Used to display images.
+
+Attributes:
+src → image location
+width → image width
+
+Best practice:
+Always add ALT attribute for accessibility.
+
+Example:
+<img src="cat.jpg" alt="cute cat">
+-->
+      </section>
+
+      <section>
+        <h2>TEXT FORMATTING</h2>
+
+        <b>Bold Text</b>
+        <!-- 
+B TAG
+
+Displays bold text.
+
+But modern HTML prefers:
+<strong>
+
+Because it has semantic meaning.
+-->
+
+        <i>Italic Text</i>
+        <!-- 
+ITALIC TAG
+
+Displays slanted text.
+
+Better alternative:
+<em>
+-->
+
+        <u>Underline Text</u>
+        <!-- 
+UNDERLINE TAG
+
+Underlines text.
+
+Usually avoided in web design because
+underlines look like hyperlinks.
+-->
+
+        <big>Big Text</big>
+        <small>Small Text</small>
+
+        <p>H<sub>2</sub>O</p>
+        <!-- 
+SUBSCRIPT TAG
+
+Displays text below baseline.
+
+Common uses:
+Chemical formulas
+Mathematics
+-->
+
+        <p>x<sup>2</sup></p>
+        <!-- 
+SUPERSCRIPT TAG
+
+Displays text above baseline.
+
+Used for:
+• exponents
+• references
+-->
+
+        <pre>
+This text
+keeps
+all spaces
+and line breaks
+</pre
+        >
+        <!-- 
+PRE TAG
+
+Preformatted text.
+
+Browser DOES NOT remove spaces.
+
+Useful for:
+• code snippets
+• poetry
+• ASCII art
+-->
+      </section>
+
+      <section>
+        <h2>LISTS</h2>
+
+        <ul>
+          <!-- 
+UNORDERED LIST
+
+Displays bullet list.
+-->
+
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <ol>
+          <!-- 
+ORDERED LIST
+
+Displays numbered list.
+-->
+
+          <li>Learn HTML</li>
+          <li>Learn CSS</li>
+          <li>Learn JavaScript</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>TABLE</h2>
+
+        <table border="1">
+          <!-- 
+TABLE TAG
+
+Used to display structured data.
+
+Examples:
+• marks
+• pricing tables
+• reports
+-->
+
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+
+          <tr>
+            <td>Krishna</td>
+            <td>95</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>FORM</h2>
+
+        <form>
+          <!-- 
+FORM TAG
+
+Used to collect user input.
+
+Examples:
+• login form
+• signup form
+• feedback form
+-->
+
+          <input type="text" placeholder="Enter name" />
+          <!-- 
+INPUT ELEMENT
+
+type attribute defines input type.
+
+Examples:
+text
+email
+password
+checkbox
+radio
+file
+-->
+
+          <input type="email" placeholder="Enter email" />
+
+          <input type="password" placeholder="Enter password" />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <!-- 
+FOOTER TAG
+
+Used for bottom section of webpage.
+
+Contains:
+• copyright
+• links
+• contact info
+-->
+      <p>Copyright 2026</p>
+    </footer>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML Notes</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Deep Learning</h1>
+    </header>
+
+    <main>
+      <section>
+        <p>This file contains deep HTML documentation inside comments.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Learning HTML deeply</p>
+    </footer>
+  </body>
+</html>
+<!doctype html>
+<!--
+================================================================================
+                ADVANCED HTML NOTES (MDN-STYLE DEEP REFERENCE)
+================================================================================
+
+HTML = HyperText Markup Language
+
+HTML defines the structure and meaning (semantics) of web content.
+
+It works together with:
+
+HTML → Structure
+CSS → Presentation
+JavaScript → Behavior
+
+Browsers parse HTML and convert it into a structure called the DOM.
+
+--------------------------------------------------------------------------------
+WHAT IS DOM (DOCUMENT OBJECT MODEL)
+--------------------------------------------------------------------------------
+
+DOM = Tree structure representation of HTML.
+
+Example HTML:
+
+<body>
+  <h1>Hello</h1>
+  <p>Text</p>
+</body>
+
+DOM Tree:
+
+body
+ ├── h1
+ │    └── "Hello"
+ └── p
+      └── "Text"
+
+JavaScript interacts with HTML through the DOM.
+
+Example:
+
+document.querySelector("h1").textContent = "New Title";
+
+--------------------------------------------------------------------------------
+HOW BROWSERS PARSE HTML
+--------------------------------------------------------------------------------
+
+Steps browser follows:
+
+1 Download HTML file
+2 Parse HTML tokens
+3 Build DOM tree
+4 Download CSS files
+5 Build CSSOM (CSS Object Model)
+6 Combine DOM + CSSOM → Render Tree
+7 Layout (calculate positions)
+8 Paint pixels on screen
+
+--------------------------------------------------------------------------------
+CONTENT CATEGORIES IN HTML
+--------------------------------------------------------------------------------
+
+HTML elements belong to categories.
+
+1 Flow content
+   Most elements fall here.
+
+2 Sectioning content
+   section, article, nav, aside
+
+3 Heading content
+   h1-h6
+
+4 Phrasing content
+   span, strong, em, a
+
+5 Embedded content
+   img, video, audio, iframe
+
+6 Interactive content
+   button, input, select
+
+--------------------------------------------------------------------------------
+GLOBAL ATTRIBUTES (VERY IMPORTANT)
+--------------------------------------------------------------------------------
+
+These attributes work on almost all HTML elements.
+
+id
+class
+style
+title
+hidden
+tabindex
+contenteditable
+draggable
+lang
+dir
+data-*
+
+Example:
+
+<div id="card" class="product" title="Product Card"></div>
+
+--------------------------------------------------------------------------------
+DATA ATTRIBUTES
+--------------------------------------------------------------------------------
+
+Custom attributes used to store extra data.
+
+Example:
+
+<div data-user-id="123"></div>
+
+Access in JavaScript:
+
+element.dataset.userId
+
+Useful for:
+
+• UI state
+• JavaScript logic
+• storing metadata
+
+--------------------------------------------------------------------------------
+SEMANTIC HTML (MEANINGFUL STRUCTURE)
+--------------------------------------------------------------------------------
+
+Semantic tags describe the meaning of content.
+
+<header>  → top area
+<nav>     → navigation links
+<main>    → primary page content
+<section> → thematic grouping
+<article> → independent content
+<aside>   → sidebar content
+<footer>  → bottom information
+
+Benefits:
+
+• SEO improvement
+• accessibility
+• maintainable code
+
+--------------------------------------------------------------------------------
+SECTIONING ELEMENTS
+--------------------------------------------------------------------------------
+
+<section>
+
+Represents thematic grouping.
+
+Example:
+
+<section>
+<h2>Features</h2>
+<p>Feature description</p>
+</section>
+
+------------------------------------------------------------
+
+<article>
+
+Self-contained content.
+
+Examples:
+
+• blog post
+• news article
+• product card
+
+------------------------------------------------------------
+
+<nav>
+
+Navigation menus.
+
+Example:
+
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+</nav>
+
+------------------------------------------------------------
+
+<aside>
+
+Sidebar content.
+
+Example:
+
+related articles
+advertisements
+profile info
+
+--------------------------------------------------------------------------------
+TEXT SEMANTICS
+--------------------------------------------------------------------------------
+
+<strong>
+
+Indicates strong importance.
+
+Example:
+
+<strong>Warning!</strong>
+
+------------------------------------------------------------
+
+<em>
+
+Emphasized text.
+
+Example:
+
+<em>Important</em>
+
+------------------------------------------------------------
+
+<mark>
+
+Highlighted text.
+
+Example:
+
+<mark>Search result</mark>
+
+------------------------------------------------------------
+
+<small>
+
+Side comments or fine print.
+
+------------------------------------------------------------
+
+<abbr>
+
+Abbreviation.
+
+Example:
+
+<abbr title="HyperText Markup Language">HTML</abbr>
+
+--------------------------------------------------------------------------------
+LINK TYPES
+--------------------------------------------------------------------------------
+
+<a href="page.html">Normal link</a>
+
+Special protocols:
+
+mailto:
+tel:
+ftp:
+
+Examples:
+
+<a href="mailto:test@email.com">Email</a>
+
+<a href="tel:+911234567890">Call</a>
+
+--------------------------------------------------------------------------------
+MEDIA ELEMENTS
+--------------------------------------------------------------------------------
+
+IMAGE
+
+<img src="image.jpg" alt="description">
+
+Best practices:
+
+• use descriptive alt text
+• compress images
+• use modern formats (webp, avif)
+
+------------------------------------------------------------
+
+VIDEO
+
+<video controls width="500">
+  <source src="video.mp4">
+</video>
+
+Attributes:
+
+controls
+autoplay
+muted
+loop
+
+------------------------------------------------------------
+
+AUDIO
+
+<audio controls>
+<source src="music.mp3">
+</audio>
+
+--------------------------------------------------------------------------------
+IFRAME
+--------------------------------------------------------------------------------
+
+Embeds another webpage.
+
+Example:
+
+<iframe src="https://example.com"></iframe>
+
+Security note:
+
+Use sandbox attribute when embedding untrusted content.
+
+--------------------------------------------------------------------------------
+HTML FORMS (VERY IMPORTANT)
+--------------------------------------------------------------------------------
+
+Forms allow users to send data to servers.
+
+Example:
+
+<form action="/submit" method="POST">
+<input type="text">
+<button>Submit</button>
+</form>
+
+--------------------------------------------------------------------------------
+FORM INPUT TYPES
+--------------------------------------------------------------------------------
+
+text
+email
+password
+number
+date
+color
+range
+file
+checkbox
+radio
+
+Example:
+
+<input type="email" required>
+
+--------------------------------------------------------------------------------
+FORM VALIDATION
+--------------------------------------------------------------------------------
+
+HTML has built-in validation.
+
+Example:
+
+<input type="email" required>
+
+Attributes:
+
+required
+min
+max
+pattern
+maxlength
+
+Example:
+
+<input pattern="[0-9]{10}">
+
+--------------------------------------------------------------------------------
+LABEL ELEMENT
+--------------------------------------------------------------------------------
+
+Associates text with input.
+
+Example:
+
+<label for="email">Email</label>
+<input id="email">
+
+Benefits:
+
+• accessibility
+• easier clicking
+
+--------------------------------------------------------------------------------
+FIELDSET AND LEGEND
+--------------------------------------------------------------------------------
+
+Groups related inputs.
+
+Example:
+
+<fieldset>
+<legend>Personal Info</legend>
+<input>
+</fieldset>
+
+--------------------------------------------------------------------------------
+ACCESSIBILITY (A11Y)
+--------------------------------------------------------------------------------
+
+Accessibility ensures websites work for disabled users.
+
+Techniques:
+
+• semantic HTML
+• alt attributes
+• labels
+• keyboard navigation
+
+ARIA attributes help when semantics aren't enough.
+
+Example:
+
+<div role="button" aria-label="Close"></div>
+
+--------------------------------------------------------------------------------
+LAZY LOADING
+--------------------------------------------------------------------------------
+
+Improves performance.
+
+Example:
+
+<img src="photo.jpg" loading="lazy">
+
+Image loads only when near viewport.
+
+--------------------------------------------------------------------------------
+SCRIPT TAG
+--------------------------------------------------------------------------------
+
+Used to load JavaScript.
+
+Example:
+
+<script src="app.js"></script>
+
+Best practice:
+
+Place before </body>
+
+or use:
+
+<script defer src="app.js"></script>
+
+--------------------------------------------------------------------------------
+META TAGS FOR SEO
+--------------------------------------------------------------------------------
+
+<meta name="description" content="Best resort">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Website Title">
+
+--------------------------------------------------------------------------------
+HTML BEST PRACTICES
+--------------------------------------------------------------------------------
+
+1 Use semantic elements
+2 Maintain indentation
+3 Avoid unnecessary divs
+4 Use alt text
+5 Use external CSS
+6 Optimize media files
+7 Follow accessibility guidelines
+
+--------------------------------------------------------------------------------
+COMMON BEGINNER MISTAKES
+--------------------------------------------------------------------------------
+
+1 Multiple h1 tags
+2 Missing alt attributes
+3 Using div everywhere
+4 Inline CSS everywhere
+5 Not using labels in forms
+6 Ignoring accessibility
+
+--------------------------------------------------------------------------------
+HTML5 APIs
+--------------------------------------------------------------------------------
+
+HTML also exposes browser APIs.
+
+Examples:
+
+Geolocation API
+Drag and Drop API
+Canvas API
+Web Storage API
+
+Example:
+
+localStorage.setItem("user","krishna")
+
+--------------------------------------------------------------------------------
+END OF ADVANCED HTML NOTES
+================================================================================
+-->

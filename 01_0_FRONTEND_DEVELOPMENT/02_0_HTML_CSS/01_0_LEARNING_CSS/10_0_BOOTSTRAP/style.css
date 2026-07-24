@@ -1,0 +1,24 @@
+body {
+  background-color: #1a1a1a;
+  height: 100vh;
+}
+.card-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.card-text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.card .btn {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 56px); 
+}
+.card {
+  margin: 50px auto;
+}
