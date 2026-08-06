@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Tags and Attributes Notes</title>
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- HTML TAG AND ATTRIBUTE NOTES                           -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        1. HTML TAG
+
+        Definition:
+        An HTML tag defines an element and tells the browser
+        what type of content is present on the webpage.
+
+        Hinglish:
+        Tag browser ko batata hai ki content heading,
+        paragraph, image, link etc. mein se kya hai.
+
+        Tags angle brackets < > ke andar likhe jate hain.
+
+        General Syntax:
+
+        <tagname>Content</tagname>
+    -->
+
+
+    <!-- Example of opening and closing tags -->
+
+    <h1>Web Technology</h1>
+
+    <!--
+        <h1>  = Opening tag
+        </h1> = Closing tag
+        Web Technology = Content
+
+        h1 tag sabse badi aur important heading banata hai.
+    -->
+
+
+    <p>This is a paragraph.</p>
+
+    <!--
+        <p>  = Opening paragraph tag
+        </p> = Closing paragraph tag
+
+        p tag webpage par paragraph banata hai.
+    -->
+
+
+    <!--
+        Some tags have both opening and closing tags.
+
+        Examples:
+
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+        <b>Bold text</b>
+        <i>Italic text</i>
+    -->
+
+
+    <!--
+        Some tags are empty or void tags.
+
+        In tags ke andar content nahi hota,
+        isliye inka closing tag nahi hota.
+
+        Examples:
+
+        <br>
+        <hr>
+        <img>
+    -->
+
+
+    <p>
+        This is the first line.<br>
+        This is the second line.
+    </p>
+
+    <!--
+        <br> means Line Break.
+
+        Yeh text ko next line mein le jata hai.
+    -->
+
+
+    <hr>
+
+    <!--
+        <hr> means Horizontal Rule.
+
+        Yeh webpage par horizontal line banata hai
+        aur do sections ko separate karta hai.
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- 2. HTML ATTRIBUTE                                     -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        Definition:
+
+        An HTML attribute provides additional information
+        or extra properties about an HTML element.
+
+        Hinglish:
+
+        Attribute kisi HTML tag ko extra information
+        ya extra property deta hai.
+
+        Attribute hamesha opening tag ke andar likha jata hai.
+
+        General Syntax:
+
+        <tag attribute="value">Content</tag>
+    -->
+
+
+    <h1 id="main-heading">HTML Attributes</h1>
+
+    <!--
+        Is example mein:
+
+        h1            = Tag
+        id            = Attribute
+        main-heading  = Attribute value
+        HTML Attributes = Content
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- ID ATTRIBUTE                                          -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        id attribute kisi element ko unique name deta hai.
+
+        Ek webpage mein normally same id ek hi element ko
+        deni chahiye.
+
+        id mein space dene ke bajay hyphen use karna better hai.
+
+        Correct:
+        id="main-heading"
+
+        Avoid:
+        id="main heading"
+    -->
+
+
+    <h2 id="course-heading">Web Technology Course</h2>
+
+
+    <!-- ===================================================== -->
+    <!-- CLASS ATTRIBUTE                                       -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        class attribute multiple elements ko ek common group
+        mein rakhta hai.
+
+        Same class multiple elements ko di ja sakti hai.
+
+        CSS aur JavaScript se same class wale sabhi elements
+        ko ek saath select kiya ja sakta hai.
+    -->
+
+
+    <p class="information">
+        HTML is used to create the structure of a webpage.
+    </p>
+
+    <p class="information">
+        CSS is used to design and style a webpage.
+    </p>
+
+    <!--
+        Dono paragraphs ki same class hai:
+
+        class="information"
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- TITLE ATTRIBUTE                                       -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        title attribute mouse hover karne par tooltip
+        ya extra information dikhata hai.
+    -->
+
+
+    <p title="This paragraph demonstrates the title attribute.">
+        Move the mouse over this paragraph.
+    </p>
+
+
+    <!-- ===================================================== -->
+    <!-- STYLE ATTRIBUTE                                       -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        style attribute se HTML element ke andar directly
+        CSS apply ki jati hai.
+
+        Isse Inline CSS kaha jata hai.
+    -->
+
+
+    <p style="color: red;">
+        JavaScript makes webpages interactive.
+    </p>
+
+    <!--
+        style   = Attribute
+        color   = CSS property
+        red     = CSS property value
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- IMAGE TAG AND ITS ATTRIBUTES                           -->
+    <!-- ===================================================== -->
+
+
+    <img
+        src="web.jpg"
+        alt="Web Development Image"
+        width="300"
+        height="200"
+    >
+
+    <!--
+        <img> tag webpage par image display karta hai.
+
+        img ek empty or void tag hai.
+        Iska closing tag nahi hota.
+
+
+        src Attribute:
+
+        src ka full meaning Source hai.
+
+        Yeh image ka filename, path ya URL batata hai.
+
+        Example:
+
+        src="web.jpg"
+
+
+        alt Attribute:
+
+        alt ka full meaning Alternative Text hai.
+
+        Image load na hone par alt text display hota hai.
+        Yeh accessibility aur SEO ke liye bhi useful hai.
+
+        Example:
+
+        alt="Web Development Image"
+
+
+        width Attribute:
+
+        Image ki display width set karta hai.
+
+        Example:
+
+        width="300"
+
+
+        height Attribute:
+
+        Image ki display height set karta hai.
+
+        Example:
+
+        height="200"
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- COMMON GLOBAL ATTRIBUTES                               -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        id:
+
+        Element ko unique identifier deta hai.
+
+        Example:
+        id="main-heading"
+
+
+        class:
+
+        Multiple elements ko same group mein rakhta hai.
+
+        Example:
+        class="information"
+
+
+        style:
+
+        Element par directly CSS apply karta hai.
+
+        Example:
+        style="color: red;"
+
+
+        title:
+
+        Mouse hover karne par tooltip dikhata hai.
+
+        Example:
+        title="Extra information"
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- TAG VS ATTRIBUTE                                      -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        TAG:
+
+        Tag HTML element ko define karta hai.
+
+        Examples:
+
+        <h1>
+        <p>
+        <img>
+        <a>
+
+
+        ATTRIBUTE:
+
+        Attribute HTML element ko extra information
+        ya property deta hai.
+
+        Examples:
+
+        id="main-heading"
+        class="information"
+        src="web.jpg"
+        alt="Web Development Image"
+        width="300"
+        height="200"
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- COMPLETE EXAMPLE BREAKDOWN                             -->
+    <!-- ===================================================== -->
+
+
+    <p class="important-text" title="HTML paragraph">
+        HTML creates webpage structure.
+    </p>
+
+    <!--
+        Is complete example mein:
+
+        p                     = Tag
+        class                 = Attribute
+        important-text        = class attribute ki value
+        title                 = Attribute
+        HTML paragraph        = title attribute ki value
+        HTML creates...       = Visible content
+        </p>                  = Closing tag
+    -->
+
+
+    <!-- ===================================================== -->
+    <!-- ONE-LINE EXAM DEFINITIONS                              -->
+    <!-- ===================================================== -->
+
+
+    <!--
+        TAG DEFINITION:
+
+        An HTML tag defines an element and specifies the type
+        of content displayed on a webpage.
+
+
+        ATTRIBUTE DEFINITION:
+
+        An HTML attribute provides additional information
+        or properties about an HTML element and is written
+        inside the opening tag.
+    -->
+
+
+</body>
+</html>
