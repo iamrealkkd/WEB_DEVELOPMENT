@@ -1,0 +1,125 @@
+/* Universal Selector */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tag / Element Selector */
+p {
+    color: green;
+    font-size: 18px;
+}
+
+/* Class Selector */
+.highlight {
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ID Selector */
+#main-header {
+    background-color: yellowgreen;
+    padding: 8px 14px;
+    text-align: left;
+}
+
+/* Descendant Selector */
+.course-card p {
+    color: red;
+    font-size: 7px;
+}
+
+/* Direct Child Selector */
+.course-card > p {
+    color: brown;
+}
+
+/* Pseudo-class */
+button:hover {
+    background-color: aliceblue;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    background-color: red;
+    border: 3px solid black;
+    padding: 8px 10px;
+}
+
+/* Text Properties */
+.intro {
+    color: magenta;
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 1;
+}
+
+.hero {
+    background-color: black;
+    padding: 10px;
+    text-align: 5;
+}
+
+.hero {
+    background-image: url("https://www.printastic.com/data/theme/slider/307/lottery-banners.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: cover;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+
+/* 1. Color Name */
+.logo {
+    color: blue;
+}
+
+/* 2. HEX */
+.logo {
+    color: #0000ff;
+}
+
+/* 3. RGB */
+.logo {
+    color: rgb(0, 0, 255);
+}
+
+/* 4. RGBA */
+.logo {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+.hero{
+    background: linear-gradient(to right, color1, color2);
+    background: radial-gradient(circle, color1, color2);
+}
+
+.box {
+    margin: 20px;
+    padding: 15px;
+}
+.position-box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+@media only screen and (max-width: 455px){
+    body{
+         background-color: #0000ff;
+    }
+    .boxes{
+        flex-direction: column;
+    }
+}
+@media only screen and(orientation: landscape){
+    body{
+        border:2px solid purple;
+    }
+}
