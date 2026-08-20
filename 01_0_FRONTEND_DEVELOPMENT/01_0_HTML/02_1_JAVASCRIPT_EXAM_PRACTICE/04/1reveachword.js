@@ -1,13 +1,23 @@
 const prompt = require("prompt-sync")();
-let sentence = prompt("Enter a sentence ");
-let words = sentence.split(" ");
-let result = "";
-for(let word of words){
-     let rev ="";
-     for(let i = word.length - 1; i >= 0; i--){
-        rev = rev + word[i];
-     }
 
-     result = result + rev + " ";
+let sentence = prompt("Enter a sentence: ");
+
+let word = "";
+let result = "";
+
+for (let i = 0; i <= sentence.length; i++) {
+  if (sentence[i] == " " || i == sentence.length) {
+    let rev = "";
+
+    for (let j = word.length - 1; j >= 0; j--) {
+      rev = rev + word[j];
+    }
+
+    result = result + rev + " ";
+    word = "";
+  } else {
+    word = word + sentence[i];
+  }
 }
+
 console.log(result);
