@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox + Positioning + Media Query Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section>
+      <h2>3.6 Flexbox Demo</h2>
+      <p>
+        display:flex, flex-direction:row, justify-content:center,
+        align-items:center, gap:20px
+      </p>
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3.7 Positioning Demo</h2>
+      <p>
+        Yellow = static (normal flow) | Green = relative (shifted 15px from its
+        normal spot, space still reserved) | Red = absolute (positioned relative
+        to the black-border container, removed from flow)
+      </p>
+      <div class="pos-demo">
+        <div class="box-static">static box</div>
+        <div class="box-relative">relative box (shifted)</div>
+        <div class="box-absolute">absolute box (top-right corner)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3.8 Media Query Demo</h2>
+      <div class="media-container">
+        <div class="media-item">Item A</div>
+        <div class="media-item">Item B</div>
+        <div class="media-item">Item C</div>
+      </div>
+      <p class="resize-note">
+        Browser window ko chhota karo (width &lt; 600px) — items row se column
+        mein badal jaayenge aur color bhi change hoga.
+      </p>
+    </section>
+  </body>
+</html>

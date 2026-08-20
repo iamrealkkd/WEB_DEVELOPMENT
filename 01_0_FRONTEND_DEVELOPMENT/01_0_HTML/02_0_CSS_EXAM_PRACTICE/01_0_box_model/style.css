@@ -1,0 +1,45 @@
+.container {
+    border: 3px solid gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100px; */
+
+    background-color: lightgray;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+
+    /* CONTENT */
+    background-color: lightblue;
+
+    /* PADDING */
+    padding: 10px;
+
+    /* BORDER */
+    border: 5px solid black;
+
+    /* MARGIN */
+    margin: 30px;
+
+    text-align: center;
+    line-height: 50px;
+}
+             /* MARGIN
+        Box ke bahar space
+                ↓
+    ┌─────────────────────┐
+    │       BORDER        │
+    │     Box ki wall     │
+    │   ┌─────────────┐   │
+    │   │   PADDING   │   │
+    │   │  andar gap  │   │
+    │   │  ┌───────┐  │   │
+    │   │  │CONTENT│  │   │
+    │   │  │ Box 1  │  │   │
+    │   │  └───────┘  │   │
+    │   └─────────────┘   │
+    └─────────────────────┘ */
