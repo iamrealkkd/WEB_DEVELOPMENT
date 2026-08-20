@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      alert("Welcome!");
+      let name = prompt("Enter your name");
+      if (name === "" || name === null) {
+        alert("Cancelled");
+      } else {
+        let proceed = confirm("Hi continue");
+        if (proceed) {
+          alert("Continuing...");
+        } else {
+          alert("Maybe later");
+        }
+      }
+    </script>
+  </body>
+</html>
