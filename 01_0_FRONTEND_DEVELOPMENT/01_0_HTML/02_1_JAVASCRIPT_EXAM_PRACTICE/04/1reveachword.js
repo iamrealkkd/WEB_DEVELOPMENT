@@ -13,6 +13,7 @@ for (let i = 0; i <= sentence.length; i++) {
       rev = rev + word[j];
     }
 
+
     result = result + rev + " ";
     word = "";
   } else {

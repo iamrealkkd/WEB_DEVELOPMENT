@@ -6,3 +6,4 @@ for(let i = word.length - 1; i >=  0; i --){
 }
 if(word === rev)console.log("Palindrome");
 else console.log("Not Palindrome");
+
