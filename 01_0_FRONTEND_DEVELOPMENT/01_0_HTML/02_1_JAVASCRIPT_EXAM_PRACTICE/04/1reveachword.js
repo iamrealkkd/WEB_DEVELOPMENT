@@ -21,3 +21,12 @@ for (let i = 0; i <= sentence.length; i++) {
 }
 
 console.log(result);
+
+
+// let sentence = "hello world";
+// let result = "";
+
+// for (let i = sentence.length - 1; i >= 0; i--) {
+//   result = result + sentence[i];
+
+// console.log(result);
