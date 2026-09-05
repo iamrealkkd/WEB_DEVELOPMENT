@@ -1,9 +1,8 @@
-import Hooks from "./components/Hooks";
-
+import ToDoList from "./components/ToDoList";
 const App = () => {
   return (
     <section>
-      <Hooks/>
+      <ToDoList />
     </section>
   );
 };
