@@ -1,9 +1,10 @@
-import Todo from "./components/Todo"
+import Toggle from "./components/Toggle"
+
 
 const App = () => {
   return (
     <div>
-      <Todo/>
+      <Toggle/>
     </div>
   )
 }
