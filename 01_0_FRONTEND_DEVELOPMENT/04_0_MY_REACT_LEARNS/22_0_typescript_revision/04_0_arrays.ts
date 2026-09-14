@@ -31,8 +31,18 @@ const matx: number[][][] = [
 
 for (let i = 0; i < matx.length; i++) {
   for (let j = 0; j < matx[i].length; j++) {
-    console.log(matx[i][j].join(" "));
+    for (let k = 0; k < matx[i][j].length; k++) {
+      console.log(matx[i][j][k]);
+    }
   }
-
-  console.log("---");
 }
+
+const singleDi: number[] = [1, 2, 3, 4, 5];
+
+const multiDi: number[][] = [[1, 2, 3, 4, 5]];
+
+const triple: number[][][] = [[[1, 2, 3, 4, 5]]];
+
+console.log(singleDi);
+console.log(multiDi);
+console.log(triple);
