@@ -9,12 +9,23 @@ console.log(person.age);
 
 //using objects as function return value
 function printUser(): { name: string; age: number; location: string } {
-    return {
-        name: "Alex",
-        age: 19,
-        location: "USA",
-    };
+  return {
+    name: "Alex",
+    age: 19,
+    location: "USA",
+  };
 }
 console.log(printUser());
 const rx = printUser();
 console.log(rx);
+
+type User = {
+  name: string;
+  age: number;
+  location: string;
+};
+const printInfo = (user: User) => {
+  return `Name: (${user.name}) Age: (${user.age}) Location: (${user.location})`;
+};
+const res = printInfo({ name: "Alex", age: 20, location: "USA" });
+console.log(res);
