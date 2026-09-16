@@ -24,3 +24,12 @@ console.log(user2);
 // Individual properties print karna
 console.log(user1.name);
 console.log(user2.email);
+//interfaces for functions
+interface MathOperation{
+  (x: number, y: number):number;
+}
+
+const add: MathOperation = (a, b) => a + b;
+const subtract: MathOperation = (a, b) => a - b;
+console.log(add(5,3));
+console.log(subtract(8, 1));
