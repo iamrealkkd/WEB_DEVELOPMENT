@@ -1,0 +1,51 @@
+// normal function
+
+const printString = (x: string) => console.log(x);
+
+const printNumber = (x: number) => console.log(x);
+
+const printBoolean = (x: boolean) => console.log(x);
+
+printString("hello");
+
+printNumber(2);
+
+printBoolean(true);
+
+// generic function
+
+function printInfo<T>(x: T): void {
+  if (typeof x === "string") {
+    console.log("String:", x);
+  } else if (typeof x === "number") {
+    console.log("Number:", x);
+  } else if (typeof x === "boolean") {
+    console.log("Boolean:", x);
+  } else {
+    console.log("Other type:", x);
+  }
+}
+
+const str = printInfo<string>("Hello");
+
+const num = printInfo<number>(2);
+
+const bool = printInfo<boolean>(true);
+
+// console.log(str);
+
+function getValue<T>(value: T): T {
+  return value;
+}
+
+const message = getValue("Hello");
+
+const score = getValue(95);
+
+const isLoggedIn = getValue(true);
+
+console.log(message);
+
+console.log(score);
+
+console.log(isLoggedIn);
