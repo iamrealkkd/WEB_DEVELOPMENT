@@ -25,11 +25,30 @@ console.log(user2);
 console.log(user1.name);
 console.log(user2.email);
 //interfaces for functions
-interface MathOperation{
-  (x: number, y: number):number;
+interface MathOperation {
+  (x: number, y: number): number;
 }
 
 const add: MathOperation = (a, b) => a + b;
 const subtract: MathOperation = (a, b) => a - b;
-console.log(add(5,3));
+console.log(add(5, 3));
 console.log(subtract(8, 1));
+
+//interface for classes
+interface Vehicle {
+  start(): void;
+  stop(): void;
+}
+
+class Car implements Vehicle {
+  start() {
+    console.log("Car Started");
+  }
+  stop() {
+    console.log("Car Stoppes");
+  }
+};
+
+const myCar = new Car();
+myCar.start();
+myCar.stop();
