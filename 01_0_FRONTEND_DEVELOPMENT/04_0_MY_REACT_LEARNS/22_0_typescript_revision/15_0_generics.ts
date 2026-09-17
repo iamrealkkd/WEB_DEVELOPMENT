@@ -49,3 +49,16 @@ console.log(message);
 console.log(score);
 
 console.log(isLoggedIn);
+
+// -----------------------------------------
+function uniqueDataTypesFunc<Type>(
+  item: Type,
+  defaultValue: Type
+): [Type, Type] {
+  return [item, defaultValue];
+}
+
+const um = uniqueDataTypesFunc<number>(10, 20);
+const tr = uniqueDataTypesFunc<string>("hello", "world");
+console.log(um);
+console.log(tr);
