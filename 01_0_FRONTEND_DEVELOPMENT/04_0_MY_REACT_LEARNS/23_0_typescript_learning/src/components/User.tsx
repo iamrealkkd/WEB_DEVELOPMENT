@@ -1,17 +1,17 @@
 import React from "react";
 
-interface UserProps {
+type user = {
   name: string;
   age: number;
   isStudent: boolean;
-}
+};
 
-const User = (props: UserProps) => {
+const User = ({ name, age, isStudent }:user) => {
   return (
     <div>
-      <h2>{props.name}</h2>
-      <h2>{props.age}</h2>
-      <h2>{props.isStudent.toString()}</h2>
+      <h2>{name}</h2>
+      <h2>{age}</h2>
+      <h2>{isStudent}</h2>
     </div>
   );
 };
