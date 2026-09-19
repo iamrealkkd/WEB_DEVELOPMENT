@@ -96,3 +96,26 @@ const redFruits = filterArray<Fruit>(
 );
 
 console.log(redFruits);
+
+function reversePair<T, U>(value1: T, value2: U): [U, T] {
+  return [value2, value1];
+}
+
+const reversedPair = reversePair("hello", 20);
+console.log(reversedPair);
+
+class Box<T> {
+  private content: T;
+  constructor(initialContent: T) {
+    this.content = initialContent;
+  }
+  getContent(): T {
+    return this.content;
+  }
+  setContent(newContent: T): void {
+    this.content = newContent;
+  }
+}
+
+const stringBox = new Box<string>("Hello, Typescript");
+console.log(stringBox);
