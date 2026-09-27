@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
 import ToDoList from "./components/ToDoList";
 import Form from "./components/Form";
+import FocusInput from "./components/FocusInput";
 // import Button from "./components/Button";
 // import UserInfo from "./components/UserInfo";
 // import AdminInfo from "./components/AdminInfo";
@@ -31,7 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <Form/>
+     <Counter/>
     </div>
   );
 };
