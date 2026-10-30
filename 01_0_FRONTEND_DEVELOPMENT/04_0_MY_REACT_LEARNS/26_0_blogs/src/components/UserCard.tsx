@@ -1,0 +1,18 @@
+import React from "react";
+import { FaUserCircle } from "react-icons/fa";
+interface UserCardProps {
+  index: number;
+  person: string;
+}
+const UserCard = ({ index, person }: User) => {
+  return (
+    <div className="flex items-center justify-between">
+      <section className="flex items-center">
+        <FaUserCircle className="text-3xl mr-3 text-gray-500" />
+        <span>{person.name}</span>
+      </section>
+    </div>
+  );
+};
+
+export default UserCard;
